@@ -87,6 +87,194 @@ body {
 }
 
 /* ============================================
+   SCREEN 0: INTRO (Ada Lovelace)
+   ============================================ */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ada portrait - fade + slide in */
+.intro-ada {
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: adaEntrance 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes adaEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.ada-portrait {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--purple-main);
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, 0.4),
+        0 0 60px rgba(236, 72, 153, 0.2);
+    filter: saturate(1.1) contrast(1.05);
+}
+
+.ada-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(124, 58, 237, 0.2) 0%,
+        rgba(236, 72, 153, 0.1) 50%,
+        transparent 70%
+    );
+    pointer-events: none;
+    animation: adaGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes adaGlowPulse {
+    0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Fallback silhouette if image not found */
+.ada-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ada-silhouette {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple-deep), #1e1b4b);
+    border: 3px solid var(--purple-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, 0.4),
+        0 0 60px rgba(236, 72, 153, 0.2);
+}
+
+.ada-symbol {
+    font-family: var(--pixel-font);
+    font-size: 2.5rem;
+    color: var(--pink-glow);
+    text-shadow: 0 0 20px rgba(240, 171, 252, 0.5);
+}
+
+/* Typewriter text box */
+.intro-text-box {
+    background: linear-gradient(135deg, rgba(46, 16, 101, 0.5), rgba(30, 27, 75, 0.7));
+    border: 2px solid var(--purple-main);
+    border-radius: 4px;
+    padding: 24px 28px;
+    max-width: 540px;
+    min-height: 120px;
+    position: relative;
+    box-shadow: var(--shadow-glow);
+    display: flex;
+    align-items: flex-start;
+}
+
+.intro-text-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, var(--pink-main), var(--purple-main), var(--blue-main)) 1;
+    pointer-events: none;
+}
+
+.intro-typewriter {
+    font-family: var(--mono-font);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.typewriter-cursor {
+    font-family: var(--mono-font);
+    font-size: 1rem;
+    color: var(--cyan-accent);
+    animation: cursorBlink 0.7s steps(1) infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Press key prompt */
+.intro-prompt {
+    opacity: 0;
+    animation: promptFadeIn 0.8s ease-out forwards;
+}
+
+.intro-prompt:not(.hidden) {
+    opacity: 1;
+}
+
+@keyframes promptFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.prompt-text {
+    font-family: var(--pixel-font);
+    font-size: 0.55rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    animation: promptPulse 2s ease-in-out infinite;
+}
+
+@keyframes promptPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; color: var(--cyan-accent); }
+}
+
+/* Intro fade-out transition */
+.intro-container.fade-out {
+    animation: introFadeOut 0.6s ease-in forwards;
+}
+
+@keyframes introFadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+/* ============================================
    SCREEN 1: WELCOME
    ============================================ */
 .welcome-container {

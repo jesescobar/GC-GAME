@@ -11,8 +11,42 @@
     <!-- Starfield canvas -->
     <canvas id="stars-canvas"></canvas>
 
+    <!-- ============ SCREEN 0: INTRO ============ -->
+    <div id="screen-intro" class="screen active">
+        <div class="intro-container">
+            <!-- Ada Lovelace portrait with fade/slide -->
+            <div class="intro-ada" id="intro-ada">
+                <!-- Replace src with your own ada_lovelace.png in assets/ folder -->
+                <img
+                    src="assets/ada_lovelace.png"
+                    alt="Ada Lovelace - La primera programadora"
+                    class="ada-portrait"
+                    onerror="this.style.display='none'; document.getElementById('ada-fallback').style.display='flex';"
+                >
+                <!-- Fallback if image not found -->
+                <div class="ada-fallback" id="ada-fallback" style="display:none;">
+                    <div class="ada-silhouette">
+                        <span class="ada-symbol">{ }</span>
+                    </div>
+                </div>
+                <div class="ada-glow"></div>
+            </div>
+
+            <!-- Typewriter text -->
+            <div class="intro-text-box">
+                <p class="intro-typewriter" id="intro-typewriter"></p>
+                <span class="typewriter-cursor" id="typewriter-cursor">_</span>
+            </div>
+
+            <!-- Press key prompt (hidden until typewriter finishes) -->
+            <div class="intro-prompt hidden" id="intro-prompt">
+                <span class="prompt-text">[ Presiona una tecla para continuar ]</span>
+            </div>
+        </div>
+    </div>
+
     <!-- ============ SCREEN 1: WELCOME ============ -->
-    <div id="screen-welcome" class="screen active">
+    <div id="screen-welcome" class="screen">
         <div class="welcome-container">
             <!-- Pixel art robot mascot -->
             <div class="pixel-mascot">
