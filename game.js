@@ -9,13 +9,12 @@
 //   - Placeholders para logica de juego
 //
 // La base de datos de preguntas esta en questions.js (QUESTIONS object)
-// Las citas inspiracionales estan en questions.js (WOMEN_QUOTES array)
 // ============================================
 
 // ==========================================
 // INTRO SCREEN LOGIC
 // ==========================================
-const INTRO_TEXT = `Los sistemas que sostienen el mundo digital estan fallando.\n\nHace mas de 200 años, Ada Lovelace escribio el primer programa de la historia. Ella demostro que las maquinas podian ir mas alla del calculo.\n\nHoy, su legado esta en peligro. Bugs criticos amenazan los sistemas del futuro...\n\nY solo vos podes repararlos.`;
+const INTRO_TEXT = `\n\nHace más de 200 años, Ada Lovelace escribió el primer programa de la historia. Ella demostró que las máquinas podían ir más allá del cálculo.\n\nHoy, su legado está en peligro. Bugs críticos amenazan los sistemas del futuro...\n\nY solo vos podés repararlos.`;
 
 let introTyping = false;
 let introReady = false;
