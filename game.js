@@ -15,7 +15,7 @@
 // ==========================================
 // INTRO SCREEN LOGIC
 // ==========================================
-const INTRO_TEXT = `Ano 2085. Los sistemas que sostienen el mundo digital estan fallando.\n\nHace mas de 200 anos, Ada Lovelace escribio el primer programa de la historia. Ella demostro que las maquinas podian ir mas alla del calculo.\n\nHoy, su legado esta en peligro. Bugs criticos amenazan los sistemas del futuro...\n\nY solo vos podes repararlos.`;
+const INTRO_TEXT = `Los sistemas que sostienen el mundo digital estan fallando.\n\nHace mas de 200 años, Ada Lovelace escribio el primer programa de la historia. Ella demostro que las maquinas podian ir mas alla del calculo.\n\nHoy, su legado esta en peligro. Bugs criticos amenazan los sistemas del futuro...\n\nY solo vos podes repararlos.`;
 
 let introTyping = false;
 let introReady = false;
