@@ -14,7 +14,7 @@
 // ==========================================
 // INTRO SCREEN LOGIC
 // ==========================================
-const INTRO_TEXT = `\n\nHace más de 200 años, Ada Lovelace escribió el primer programa de la historia. Ella demostró que las máquinas podían ir más allá del cálculo.\n\nHoy, su legado está en peligro. Bugs críticos amenazan los sistemas del futuro...\n\nY solo vos podés repararlos.`;
+const INTRO_TEXT = `Año 2085. Los sistemas digitales están fallando.\n\nHace más de 200 años, Ada Lovelace escribió el primer programa de la historia.\n\nHoy, bugs críticos amenazan su legado... y solo vos podés repararlos.`;
 
 let introTyping = false;
 let introReady = false;

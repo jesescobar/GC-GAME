@@ -14,32 +14,35 @@
     <!-- ============ SCREEN 0: INTRO ============ -->
     <div id="screen-intro" class="screen active">
         <div class="intro-container">
-            <!-- Ada Lovelace -->
-            <div class="intro-ada" id="intro-ada">
-                <img
-                    src="assets/ada_lovelace.png"
-                    alt="Ada Lovelace - La primera programadora"
-                    class="ada-portrait"
-                    onerror="this.style.display='none'; document.getElementById('ada-fallback').style.display='flex';"
-                >
-                <!-- Fallback if image not found -->
-                <div class="ada-fallback" id="ada-fallback" style="display:none;">
-                    <div class="ada-silhouette">
-                        <span class="ada-symbol">{ }</span>
+            <!-- Left: Ada portrait -->
+            <div class="intro-left" id="intro-ada">
+                <div class="ada-frame">
+                    <!-- Replace src with your ada_lovelace.png in assets/ -->
+                    <img
+                        src="assets/ada_lovelace.png"
+                        alt="Ada Lovelace"
+                        class="ada-portrait"
+                        onerror="this.onerror=null; this.parentElement.classList.add('no-img');"
+                    >
+                    <div class="ada-label">Ada Lovelace, 1843</div>
+                </div>
+            </div>
+            <!-- Right: terminal text -->
+            <div class="intro-right">
+                <div class="intro-terminal">
+                    <div class="terminal-header">
+                        <span class="edot red"></span>
+                        <span class="edot yellow"></span>
+                        <span class="edot green"></span>
+                        <span class="terminal-title">historia.py</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="intro-typewriter" id="intro-typewriter"></p><span class="tw-cursor" id="typewriter-cursor">_</span>
                     </div>
                 </div>
-                <div class="ada-glow"></div>
-            </div>
-
-            <!-- Typewriter text -->
-            <div class="intro-text-box">
-                <p class="intro-typewriter" id="intro-typewriter"></p>
-                <span class="typewriter-cursor" id="typewriter-cursor">_</span>
-            </div> 
-
-            <!-- Press key prompt (hidden until typewriter finishes) -->
-            <div class="intro-prompt hidden" id="intro-prompt">
-                <span class="prompt-text">[ Presiona una tecla para continuar ]</span>
+                <div class="intro-prompt hidden" id="intro-prompt">
+                    <span class="prompt-text">[ Presiona una tecla o hacé click para continuar ]</span>
+                </div>
             </div>
         </div>
     </div>
