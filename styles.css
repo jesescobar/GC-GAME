@@ -303,11 +303,11 @@ body {
     z-index: 2;
 }
 
-/* Pixel Art Robot Mascot */
+/* Pixel Art Robot Mascot - 8-bit sprite */
 .pixel-mascot {
     position: relative;
-    width: 120px;
-    height: 140px;
+    width: 128px;
+    height: 160px;
     animation: floatRobot 3s ease-in-out infinite;
 }
 
@@ -316,8 +316,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     background: radial-gradient(circle, rgba(204, 0, 204, 0.3) 0%, transparent 70%);
     border-radius: 50%;
 }
@@ -327,7 +327,9 @@ body {
     z-index: 1;
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 10px rgba(204, 0, 204, 0.5));
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 0 8px rgba(204, 0, 204, 0.5));
 }
 
 .antenna-light {
@@ -387,17 +389,21 @@ body {
     letter-spacing: 3px;
 }
 
-.title-bug {
-    font-size: 2rem;
-    animation: bugWalk 2s steps(4) infinite;
+/* Pixel art bug sprite */
+.pixel-bug {
+    width: 56px;
+    height: 40px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 0 6px rgba(204, 0, 204, 0.5));
+    animation: bugWalk 1.5s steps(2) infinite;
+    margin-top: 4px;
 }
 
 @keyframes bugWalk {
-    0% { transform: translateX(-10px) rotate(-5deg); }
-    25% { transform: translateX(0) rotate(0deg); }
-    50% { transform: translateX(10px) rotate(5deg); }
-    75% { transform: translateX(0) rotate(0deg); }
-    100% { transform: translateX(-10px) rotate(-5deg); }
+    0%   { transform: translateX(-8px); }
+    50%  { transform: translateX(8px); }
+    100% { transform: translateX(-8px); }
 }
 
 /* Brand tag */
