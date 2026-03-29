@@ -132,7 +132,11 @@ function showScreen(screenId) {
 // ==========================================
 function startGame(level) {
   currentLevel = level;
-  questions = QUESTIONS[level];
+
+  let allQuestions = QUESTIONS[level];
+  let shuffled = shuffleArray([...allQuestions]);
+  questions = shuffled.slice(0, 5);
+
   currentQuestionIndex = 0;
   score = 0;
 
