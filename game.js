@@ -20,6 +20,12 @@ let introReady = false;
 let introCharIndex = 0;
 let introTimer = null;
 
+const TIME_PER_LEVEL = {
+  easy: 15,
+  medium: 30,
+  advanced: 45,
+};
+
 function startIntro() {
   const el = document.getElementById("intro-typewriter");
   const cursor = document.getElementById("typewriter-cursor");
@@ -113,12 +119,6 @@ let score = 0;
 let timer = null;
 let timeLeft = 0;
 let questions = [];
-
-const TIME_PER_LEVEL = {
-  easy: 15,
-  medium: 35,
-  advanced: 45,
-};
 
 function showScreen(screenId) {
   document
