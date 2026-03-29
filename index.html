@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="intro-prompt hidden" id="intro-prompt">
-                    <span class="prompt-text">[ Presiona una tecla o hacé click para continuar ]</span>
+                    <span class="prompt-text">[ Presioná una tecla o hacé click para continuar ]</span>
                 </div>
             </div>
         </div>
@@ -52,7 +52,6 @@
     <!-- ============ SCREEN 1: WELCOME ============ -->
     <div id="screen-welcome" class="screen">
       <div class="welcome-container">
-        <!-- Pixel art robot mascot - true 8-bit sprite -->
         <div class="pixel-mascot">
           <div class="mascot-glow"></div>
           <svg viewBox="0 0 120 140" class="robot-svg" aria-label="Robot mascota">
@@ -84,31 +83,23 @@
         <h1 class="game-title">
           <span class="title-main">ENCUENTRA</span>
           <span class="title-accent">EL BUG</span>
-          <!-- Pixel art bug sprite -->
           <svg viewBox="0 0 14 10" class="pixel-bug" aria-label="Bug pixel art" shape-rendering="crispEdges">
-            <!-- Legs left -->
             <rect x="1" y="2" width="1" height="1" fill="#E8D000"/>
             <rect x="0" y="4" width="1" height="1" fill="#E8D000"/>
             <rect x="1" y="6" width="1" height="1" fill="#E8D000"/>
-            <!-- Legs right -->
             <rect x="12" y="2" width="1" height="1" fill="#E8D000"/>
             <rect x="13" y="4" width="1" height="1" fill="#E8D000"/>
             <rect x="12" y="6" width="1" height="1" fill="#E8D000"/>
-            <!-- Antennae -->
             <rect x="4" y="0" width="1" height="1" fill="#e040e0"/>
             <rect x="9" y="0" width="1" height="1" fill="#e040e0"/>
             <rect x="5" y="1" width="1" height="1" fill="#e040e0"/>
             <rect x="8" y="1" width="1" height="1" fill="#e040e0"/>
-            <!-- Body -->
             <rect x="4" y="2" width="6" height="6" fill="#CC00CC"/>
             <rect x="3" y="3" width="8" height="4" fill="#CC00CC"/>
-            <!-- Shell lines -->
             <rect x="4" y="4" width="6" height="1" fill="#461178"/>
             <rect x="4" y="6" width="6" height="1" fill="#461178"/>
-            <!-- Eyes -->
             <rect x="5" y="3" width="1" height="1" fill="#E8D000"/>
             <rect x="8" y="3" width="1" height="1" fill="#E8D000"/>
-            <!-- Bottom -->
             <rect x="5" y="8" width="4" height="1" fill="#e040e0"/>
           </svg>
         </h1>
@@ -119,36 +110,32 @@
           <span class="brand-country">PARAGUAY</span>
         </div>
 
-        <button
-          class="btn btn-play pixel-btn"
-          onclick="showScreen('screen-select')"
-        >
-          ▶ INICIAR MISION
+        <button class="btn btn-play pixel-btn" onclick="showScreen('screen-select')">
+          ▶ INICIAR MISIÓN
         </button>
 
-        <div class="pixel-stars">
-        </div>
+        <div class="pixel-stars"></div>
       </div>
     </div>
 
     <!-- ============ SCREEN 2: LEVEL SELECT ============ -->
     <div id="screen-select" class="screen">
       <div class="select-container">
-        <h2 class="screen-title">ELIGE TU MISION</h2>
+        <h2 class="screen-title">ELIGE TU MISIÓN</h2>
         <p class="select-subtitle">
-          Cada mision tiene sistemas con bugs que necesitan ser reparados
+          Cada misión tiene sistemas con bugs que necesitan ser reparados
         </p>
 
         <div class="level-cards">
           <div class="level-card card-easy" onclick="startGame('easy')">
             <div class="card-pixel-border">
-              <h3 class="card-title">NIVEL FACIL</h3>
+              <h3 class="card-title">NIVEL FÁCIL</h3>
               <div class="card-separator"></div>
               <p class="card-desc">
                 Conceptos básicos, errores simples y primeros bugs
               </p>
               <div class="card-info">
-                <span> 5 desafios</span>
+                <span> 5 desafíos</span>
                 <span>⏱ 15s c/u</span>
               </div>
               <div class="difficulty-dots">
@@ -159,6 +146,7 @@
               <div class="card-cta">[ CLICK PARA JUGAR ]</div>
             </div>
           </div>
+
           <div class="level-card card-medium" onclick="startGame('medium')">
             <div class="card-pixel-border">
               <h3 class="card-title">NIVEL MEDIO</h3>
@@ -167,7 +155,7 @@
                 Errores de sintaxis, tipos de datos, loops y condiciones
               </p>
               <div class="card-info">
-                <span> 5 desafios</span>
+                <span> 5 desafíos</span>
                 <span>⏱ 30s c/u</span>
               </div>
               <div class="difficulty-dots">
@@ -184,10 +172,10 @@
               <h3 class="card-title">NIVEL AVANZADO</h3>
               <div class="card-separator"></div>
               <p class="card-desc">
-                Logica incorrecta, edge cases, errores de diseno y funciones
+                Lógica incorrecta, edge cases, errores de diseño y funciones
               </p>
               <div class="card-info">
-                <span> 5 desafios</span>
+                <span> 5 desafíos</span>
                 <span>⏱ 45s c/u</span>
               </div>
               <div class="difficulty-dots">
@@ -200,10 +188,7 @@
           </div>
         </div>
 
-        <button
-          class="btn btn-back pixel-btn"
-          onclick="showScreen('screen-welcome')"
-        >
+        <button class="btn btn-back pixel-btn" onclick="showScreen('screen-welcome')">
           ← VOLVER
         </button>
       </div>
@@ -215,7 +200,7 @@
         <!-- HUD Bar -->
         <div class="game-hud">
           <div class="hud-block">
-            <span class="hud-label">MISION</span>
+            <span class="hud-label">MISIÓN</span>
             <span class="hud-value" id="hud-question">1/5</span>
           </div>
           <div class="hud-block">
@@ -237,7 +222,7 @@
 
         <!-- Story context for each question -->
         <div class="mission-context" id="mission-context">
-           Mision: Reparar el modulo de navegacion...
+           Misión: Reparar el módulo de navegación...
         </div>
 
         <!-- Code editor mock -->
@@ -248,24 +233,17 @@
               <span class="edot yellow"></span>
               <span class="edot green"></span>
             </div>
-            <span class="editor-filename" id="editor-filename"
-              >mision_01.py</span
-            >
+            <span class="editor-filename" id="editor-filename">mision_01.py</span>
             <span class="editor-tag">Python 3</span>
           </div>
           <div class="editor-body">
-            <pre
-              class="code-block"
-              id="code-content"
-            ><code>print("Cargando...")</code></pre>
+            <pre class="code-block" id="code-content"><code>print("Cargando...")</code></pre>
           </div>
         </div>
 
         <!-- Question + Options -->
         <div class="question-section">
-          <p class="question-prompt" id="question-text">
-             ¿Donde esta el bug?
-          </p>
+          <p class="question-prompt" id="question-text">🔍 ¿Dónde está el bug?</p>
           <div class="options-grid" id="options-grid">
             <!-- JS injects options here -->
           </div>
@@ -283,7 +261,7 @@
     <!-- ============ SCREEN 5: RESULTS ============ -->
     <div id="screen-results" class="screen">
       <div class="results-container">
-        <h2 class="results-title" id="results-title">¡MISION COMPLETADA!</h2>
+        <h2 class="results-title" id="results-title">¡MISIÓN COMPLETADA!</h2>
 
         <div class="score-showcase">
           <div class="score-ring">
@@ -296,7 +274,7 @@
 
         <div id="prize-badge" class="prize-box hidden">
            ¡GANASTE UN PREMIO!<br />
-          <small>Mostra esta pantalla en el stand de Girls Code</small>
+          <small>Mostrá esta pantalla en el stand de Girls Code</small>
         </div>
 
         <div class="results-stats" id="results-stats"></div>
@@ -305,19 +283,16 @@
           <button class="btn btn-play pixel-btn" onclick="resetGame()">
             JUGAR DE NUEVO
           </button>
-          <button
-            class="btn btn-back pixel-btn"
-            onclick="showScreen('screen-select')"
-          >
+          <button class="btn btn-back pixel-btn" onclick="showScreen('screen-select')">
             CAMBIAR NIVEL
           </button>
         </div>
 
         <div class="cta-box">
-          <p class="cta-main">¡Segui aprendiendo a programar con nosotras!</p>
+          <p class="cta-main">¡Seguí aprendiendo a programar con nosotras!</p>
           <div class="social-badges">
-            <span class="social-tag"> @girlscodepy</span>
-            <span class="social-tag"> girlscode.com.py</span>
+            <span class="social-tag">@girlscodepy</span>
+            <span class="social-tag">girlscode.com.py</span>
           </div>
         </div>
       </div>
