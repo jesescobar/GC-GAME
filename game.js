@@ -20,6 +20,12 @@ let introReady = false;
 let introCharIndex = 0;
 let introTimer = null;
 
+const POINTS_PER_LEVEL = {
+  easy: 5,
+  medium: 10,
+  advanced: 20,
+};
+
 const TIME_PER_LEVEL = {
   easy: 15,
   medium: 30,
@@ -205,7 +211,7 @@ function selectAnswer(index) {
   let correct = questions[currentQuestionIndex].correct === index;
 
   if (correct) {
-    score += 10;
+    score += POINTS_PER_LEVEL[currentLevel];
     document.getElementById("hud-score").textContent = score;
   }
 
