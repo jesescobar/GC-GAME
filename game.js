@@ -27,8 +27,8 @@ const POINTS_PER_LEVEL = {
 };
 
 const TIME_PER_LEVEL = {
-  easy: 15,
-  medium: 30,
+  easy: 25,
+  medium: 35,
   advanced: 45,
 };
 
