@@ -230,7 +230,6 @@ function showFeedback(isCorrect, isTimeout) {
 
   container.innerHTML = `
     <div class="feedback-card ${isTimeout ? "timeout" : isCorrect ? "success" : "failure"}">
-      <span class="feedback-icon">${isCorrect ? "🎉" : "⚠️"}</span>
       <h3 class="feedback-title">${title}</h3>
       <p class="feedback-explanation">${q.explanation}</p>
       <button class="feedback-btn" onclick="nextQuestion()">Continuar</button>
